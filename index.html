@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>坦克大战 · Tank Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <header id="hud">
+    <div class="stat">
+      <span class="label">关卡</span>
+      <span class="value" id="hud-level">1</span>
+    </div>
+    <div class="stat">
+      <span class="label">得分</span>
+      <span class="value" id="hud-score">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">剩余敌人</span>
+      <span class="value" id="hud-enemies">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">生命</span>
+      <span class="value" id="hud-lives">3</span>
+    </div>
+  </header>
+
+  <div id="stage">
+    <canvas id="game" width="480" height="480"></canvas>
+
+    <div class="overlay" id="overlay">
+      <h1 id="ov-title">坦克大战</h1>
+      <p id="ov-body">保卫基地，消灭所有敌方坦克。</p>
+      <ul id="ov-keys">
+        <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> 移动</li>
+        <li><kbd>空格</kbd> / <kbd>J</kbd> 开火</li>
+        <li><kbd>P</kbd> 暂停 · <kbd>M</kbd> 静音 · <kbd>R</kbd> 重开</li>
+      </ul>
+      <button id="ov-btn" type="button">开始游戏</button>
+    </div>
+  </div>
+
+  <footer id="legend">
+    <span><i class="sw brick"></i>砖墙</span>
+    <span><i class="sw steel"></i>钢墙</span>
+    <span><i class="sw base"></i>基地</span>
+    <span><i class="sw star"></i>火力</span>
+    <span><i class="sw shield"></i>护盾</span>
+    <span><i class="sw life"></i>生命</span>
+    <span><i class="sw bomb"></i>核弹</span>
+  </footer>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# 统一按 LF 存入仓库，避免 Windows / macOS 协作时整文件 diff
+* text=auto
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
